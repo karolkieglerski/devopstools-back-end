@@ -6,3 +6,4 @@ Dockerfile
 db/
 devopstools/tests/
 .git/
+htmlcov/

@@ -8,9 +8,9 @@ from devopstools.api.models import User
 
 COV = coverage.coverage(
     branch=True,
-    include='project/*',
+    include='devopstools/*',
     omit=[
-        'project/tests/*'
+        'devopstools/tests/*'
     ]
 )
 COV.start()
@@ -31,7 +31,7 @@ def test():
 @manager.command
 def cov():
     """Runs the unit tests with coverage."""
-    tests = unittest.TestLoader().discover('project/tests')
+    tests = unittest.TestLoader().discover('devopstools/tests')
     result = unittest.TextTestRunner(verbosity=2).run(tests)
     if result.wasSuccessful():
         COV.stop()
