@@ -9,5 +9,6 @@ python manage.py seed_db
 if [[ $1 == 'test' ]]; then
     python manage.py test
     python manage.py cov
+else
+    python manage.py runserver -p 5555
 fi
-python manage.py runserver -p 5555
